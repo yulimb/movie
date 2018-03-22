@@ -1,17 +1,16 @@
 const {
-	mod,
-	reset
-} = require("./publice/index.js")
-module.exports = '   <!DOCTYPE html > <
-html >
+    mod,
+    reset
+} = require("../publice/")
+module.exports = `  <!DOCTYPE html >
+<html >
 	<head>
 				<meta charset="utf-8">
 				<meta name="viewport" content="width=device-width,initial-scale=1">
-				<tittle>Koa Server</tittle>
+				<title>Koa Server</title>
 				<link rel="stylesheet" href={reset} />
        			<link rel="stylesheet" href={mod}/>
-			</head> <
-	body >
+			</head> <body >
 	<div class="g-doc f-ff1">
         <div class="g-hd f-pr">
         </div>
@@ -124,4 +123,4 @@ html >
 
 	<
 	/html>
-'
+`

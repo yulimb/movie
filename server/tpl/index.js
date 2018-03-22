@@ -1,4 +1,6 @@
 const normalTpl = require("./normal");
+const test = require("./test");
 module.exports = {
-	normal: normalTpl
+	normal: normalTpl,
+	demo: test
 }
