@@ -4,4 +4,7 @@ node_modules
 
 build
 
+.cache
+dist
+
 npm-debug.log
