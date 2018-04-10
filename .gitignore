@@ -1,10 +1,16 @@
+# dependencies
 node_modules
 
-.idea
-
-build
-
 .cache
+
+# logs
+npm-debug.log
+
+# Nuxt generate
 dist
 
-npm-debug.log
+# System
+.DS_Store
+
+# Build
+build
