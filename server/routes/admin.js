@@ -3,8 +3,6 @@ const {
   get,
   post,
   del,
-  auth,
-  admin,
   required
 } = require('../lib/decorator')
 const {
@@ -15,12 +13,9 @@ const {
   findAndRemove
 } = require('../service/movie')
 
-@controller('/admin')
 export class adminController {
   @get('/movie/list')
-  @auth
-  @admin('admin')
-  async getMovieList (ctx, next) {
+  async getMovieList(ctx, next) {
     console.log('admin movie list')
     const movies = await getAllMovies()
 
@@ -34,7 +29,7 @@ export class adminController {
   @required({
     query: ['id']
   })
-  async remove (ctx, next) {
+  async remove(ctx, next) {
     const id = ctx.query.id
 
     await findAndRemove(id)
@@ -51,8 +46,11 @@ export class adminController {
   @required({
     body: ['email', 'password']
   })
-  async login (ctx, next) {
-    const { email, password } = ctx.request.body
+  async login(ctx, next) {
+    const {
+      email,
+      password
+    } = ctx.request.body
     const matchData = await checkPassword(email, password)
 
     if (!matchData.user) {

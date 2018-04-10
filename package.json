@@ -4,7 +4,7 @@
   "description": "",
   "main": "server/index.js",
   "scripts": {
-    "start": "rimraf -rf dist && rimraf -rf .cache && SET NODE_ENV=development && node ./start.js",
+    "start": "rimraf -rf dist && rimraf -rf .cache && SET NODE_ENV=development && nodemon ./start.js",
     "build": "rimraf -rf parcel/dist && parcel build src/index.html --no-cache -d dist --public-url /",
     "test": "echo \"Error: no test specified\" && exit 1",
     "startp": "parcel src/index.html"
@@ -51,7 +51,7 @@
     "qiniu": "^7.1.1",
     "ramda": "^0.25.0",
     "react": "^16.1.1",
-    "react-dom": "^16.1.1",
+    "react-dom": "^16.3.0",
     "react-router-dom": "^4.2.2",
     "request": "^2.83.0",
     "request-promise-native": "^1.0.5",

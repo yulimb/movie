@@ -36,7 +36,7 @@ export default class Detail extends Component {
   }
 
   componentDidMount() {
-    this._getMovieDetail()
+    //this._getMovieDetail()
   }
 
   _getMovieDetail = () => {
